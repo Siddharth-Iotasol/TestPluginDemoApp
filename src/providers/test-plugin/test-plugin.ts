@@ -15,11 +15,18 @@ import { Plugin, Cordova } from '@ionic-native/core';
 export class TestPluginProvider {
 
     @Cordova()
-    showAlert(arg1: any): Promise<string> {
+    initialize(arg1: any): Promise<string> {
+        alert('Service Your Name is ' + arg1);
         return;
     }
     @Cordova()
-    checkOpenLock(arg1: any): Promise<string> {
+    openLock(arg1: any): Promise<string> {
+        alert('Service openLock Response is ' + arg1);
+        return;
+    }
+    @Cordova()
+    closeLock(arg1: any): Promise<string> {
+        alert('Service closeLock Response is ' + arg1);
         return;
     }
 }
